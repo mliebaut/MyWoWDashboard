@@ -1,1 +1,2 @@
 # MyWoWDashboard
+!(image.png)

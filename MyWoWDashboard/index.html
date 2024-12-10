@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Of Warcraft Armory Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css" integrity="sha512-RpeJZX3aH5oZN3U3JhE7Sd+HG8XQsqmP3clIbu4G28p668yNsRNj3zMASKe1ATjl/W80wuEtCx2dFA8xaebG5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">World Of Warcraft Armory Viewer</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <form id="characterForm" onsubmit="return false;">
+        <div class="field">
+            <label class="label" for="region">Region</label>
+            <div class="control">
+                <div class="select">
+                    <select id="region">
+                        <option value="us">United States</option>
+                        <option value="eu">Europe</option>
+                        <option value="kr">Korea</option>
+                        <option value="tw">Taiwan</option>
+                        <option value="cn">China</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="characterName">Character Name</label>
+          <div class="control">
+            <input class="input" type="text" id="characterName" placeholder="Enter Character Name" required>
+          </div>
+        </div>
+        
+        <div class="field">
+          <label class="label" for="characterRealm">Character Realm</label>
+          <div class="control">
+            <input class="input" type="text" id="characterRealm" placeholder="Enter Character Realm" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button id="searchButton" class="button is-fullwidth is-rounded">Search Character</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Résultats de l'API -->
+      <div id="characterDetails" class="box is-hidden">
+        <h2 class="subtitle">Character Details</h2>
+        <div id="characterInfo">
+          <!-- Détails du personnage seront insérés ici -->
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
